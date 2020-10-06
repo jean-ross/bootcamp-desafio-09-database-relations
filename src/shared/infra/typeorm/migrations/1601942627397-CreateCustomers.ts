@@ -21,6 +21,11 @@ export default class CreateCustomers1601942627397
             type: 'varchar',
           },
           {
+            name: 'email',
+            type: 'varchar',
+            isUnique: true,
+          },
+          {
             name: 'created_at',
             type: 'timestamp',
             default: 'now()',
