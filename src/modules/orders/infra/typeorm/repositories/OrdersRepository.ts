@@ -23,8 +23,8 @@ class OrdersRepository implements IOrdersRepository {
   }
 
   public async findById(id: string): Promise<Order | undefined> {
-    const order = this.ormRepository.findOne(id, {
-      relations: ['order_product', 'customer'],
+    const order = await this.ormRepository.findOne(id, {
+      relations: ['order_products', 'customer'],
     });
 
     return order;
